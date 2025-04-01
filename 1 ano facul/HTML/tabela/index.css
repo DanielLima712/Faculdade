@@ -1,0 +1,25 @@
+caption{
+    font-size: 20px;
+    
+}
+table th{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid;
+    text-align: center;
+    background-color: aquamarine;
+    padding: 5px;
+}
+tr td{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    border: 2px solid;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: rgb(221, 221, 221);
+}
+.nome0{
+    text-align: left;
+}
+.nome01{
+    background-color: rgb(221, 221, 221);
+}

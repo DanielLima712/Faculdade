@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecione uma página</title>
+</head>
+<body>
+    
+    <h1>Escolha uma página para visitar:</h1>
+
+    <select id="Escolha a página">
+        <option value="menu.html">Menu</option>
+        <option value="http://127.0.0.1:3000/HTML/AtividadeAmonia/atividade.html">Amonia</option>
+    </select>
+
+    <script>
+        const selectElement = document.getElementById("Escolha a página");
+        selectElement.addEventListener("change", function(){
+            const selectedPage = this.value;
+            window.location.href = selectedPage;
+        });
+    </script>
+</body>
+</html>

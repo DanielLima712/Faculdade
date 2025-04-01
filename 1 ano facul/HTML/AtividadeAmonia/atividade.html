@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS, amônia e impressão 3D</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .numeros {
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .box {
+            margin: 15px 0;
+            background-color: #e1fae0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .box2 {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <div class="box2">
+        <h1>JS, Amônia e Impressão 3D</h1>
+        <div id="results">
+        </div>
+    </div>
+
+    <script>
+        const pi = 3.14;
+        let raio_h = 5.1; // em cm
+        let raio_n = 6.2; // em cm
+        let raio_lig = 3.0; // em cm
+        let comp_lig = 10.9; // em cm
+        let volume_atomos; // em cm3
+        let massa_total; // em g
+        let custo;
+        let filamento = 112;
+        let perimetro;
+        let elegante;
+        let vol_total;
+        perimetro = 2 * Math.PI * raio_h;
+        elegante = Math.pow(raio_h, 2);
+
+        volume_h = (4 / 3) * pi * Math.pow(raio_h, 3);
+        volume_n = (4 / 3) * pi * Math.pow(raio_n, 3);
+        volume_atomos = 3 * volume_h + volume_n;
+        volume_lig = 2 * pi * Math.pow(raio_lig, 2) * comp_lig;
+        vol_total = volume_atomos + 3 * volume_lig;
+        massa_total = 1.24 * (volume_atomos + 3 * volume_lig);
+        custo = (massa_total / 1000) * filamento;
+
+        const results = 
+        `
+            <p>Elegante: <span class="numeros">${elegante.toFixed(2)}</span></p>
+            <p>Perímetro: <span class="numeros">${perimetro.toFixed(2)} cm</span></p>
+            <div class="box">
+                <p>Volume H: <span class="numeros">${volume_h.toFixed(2)} cm³</span></p>
+                <p>Volume N: <span class="numeros">${volume_n.toFixed(2)} cm³</span></p>
+                <p>Volume dos átomos: <span class="numeros">${volume_atomos.toFixed(2)} cm³</span></p>
+                <p>Volume ligação: <span class="numeros">${volume_lig.toFixed(2)} cm³</span></p>
+                <p>Volume total: <span class="numeros">${vol_total.toFixed(2)} cm³</span></p>
+                <p>Massa total: <span class="numeros">${massa_total.toFixed(2)} g</span></p>
+                <p>Valor do material: <span class="numeros">R$ ${custo.toFixed(2)}</span></p>
+            </div>
+        `;
+
+        document.getElementById('results').innerHTML = results;
+    </script>
+</body>
+</html>

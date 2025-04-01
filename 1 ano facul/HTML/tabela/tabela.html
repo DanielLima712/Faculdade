@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24/10/2024</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <table align="center">
+        <caption>
+            <b>INFORMAÇÕES DOS ALUNOS</b>
+        </caption>
+        <thead>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Curso</th>
+        </thead>
+        <tr class="nome01">
+            <td class="nome0">⠀⠀0. Teste aa</td>
+            <td>teste@uniara.edu.br</td>
+            <td>Sistemas de Informação</td>
+        </tr>
+        <script>
+            for(i = 1; i <= 100; i++){
+            document.write("<tr>"); // inicio da nova linha
+                document.write("<td>");
+                    if(i < 10) document.write("&nbsp&nbsp&nbsp");
+                    if(i < 100) document.write("&nbsp&nbsp")
+                    document.write(i);
+                    document.write(". Daniel de Paiva Lima");
+                document.write("</td>");
+                document.write("<td>");
+                    document.write("daniellima@uniara.edu.br");
+                document.write("</td>");
+                document.write("<td>");
+                    document.write("Sistemas de Informação");
+                document.write("</td>");
+            document.write("</tr>");
+                
+            }
+        </script>
+    </table>
+</body>
+</html>

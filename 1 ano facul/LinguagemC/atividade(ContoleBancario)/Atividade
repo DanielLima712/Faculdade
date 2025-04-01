@@ -1,0 +1,24 @@
+Exercício 3 (esse pode ser entregue até dia 16/10/2024)
+Desenvolva uma aplicação na linguagem C para o controle bancário, onde o usuário
+poderá gerenciar uma única conta corrente ou uma única conta poupança de cada vez.
+A aplicação deve permitir realizar as seguintes operações utilizando apenas conceitos
+básicos de programação:
+1. Cadastrar uma nova conta:O usuário pode cadastrar uma conta, especificando o tipo de conta 
+(1 - corrente, 2 - poupança), o nome do titular (máximo 50 caracteres), número da conta e saldo inicial.
+2. Exibir informações da conta: O sistema deve exibir o tipo de conta, o nome do titular, o número da conta e o saldo atual.
+3. Depositar:  O usuário pode depositar um valor na conta e atualizar o saldo.
+4. Sacar:  O usuário pode sacar um valor da conta, desde que o saldo seja suficiente.
+5. Exibir saldo:  O sistema deve exibir o saldo atual da conta.
+6. Sair: O sistema deve encerrar a execução.
+Requisitos:
+● Não utilize vetores.
+● Use variáveis simples para armazenar os dados da conta.
+● Utilize comandos básicos como if, else, switch, while, for, printf e scanf.
+Esqueleto básico da aplicação:
+A estrutura do programa deve incluir o seguinte menu:
+1. Cadastrar nova conta
+2. Exibir informações da conta
+3. Depositar
+4. Sacar
+5. Exibir saldo
+6. Sair
